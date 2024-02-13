@@ -327,9 +327,9 @@ NewPing sonar[3] =
 
 void read_ultrasonic_sensor(void)
 {
-  UltrasonicSensorData[0] = sonar[0].ping_cm() * 10.0;  // 전방
-  UltrasonicSensorData[1] = sonar[1].ping_cm() * 10.0;  // 왼쪽
-  UltrasonicSensorData[2] = sonar[2].ping_cm() * 10.0;  // 오른쪽
+  UltrasonicSensorData[0] = sonar[0].ping_cm() * 10.0; 
+  UltrasonicSensorData[1] = sonar[1].ping_cm() * 10.0; 
+  UltrasonicSensorData[2] = sonar[2].ping_cm() * 10.0;  
 
   if (  UltrasonicSensorData[0] == 0)
   {
