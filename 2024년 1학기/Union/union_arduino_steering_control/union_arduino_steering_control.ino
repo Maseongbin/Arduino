@@ -32,16 +32,8 @@ void loop()
   Serial.println(u.mbyte[1]);
   Serial.read();
   
-  if(u.mbyte[0] == 30 && u.mbyte[1] == 0)
-  {
-    Steeringservo.write(NEUTRAL_ANGLE + u.angle);
-  }
+  Steeringservo.write(NEUTRAL_ANGLE + u.angle);
   
-  if(u.mbyte[0] == 226 && u.mbyte[1] == 255)
-  {
-    Steeringservo.write(NEUTRAL_ANGLE + u.angle);
-  }
-
   Serial.print("angle_offset: ");
   Serial.println(u.angle);
   Serial.print("angle: ");
